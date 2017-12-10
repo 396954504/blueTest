@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lihon.myapplication.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态:"
+            android:id="@+id/textView_status"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            android:id="@+id/edit_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_status"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:onClick="sendMessage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox_scan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentEnd="false">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描"
+            android:id="@+id/button_scan"
+            android:layout_below="@+id/textView_status"
+            android:layout_toLeftOf="@+id/button_connect"
+            android:layout_toStartOf="@+id/button_connect" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接"
+            android:id="@+id/button_connect"
+            android:layout_above="@+id/checkBox_connect"
+            android:layout_toLeftOf="@+id/button_tx"
+            android:layout_toStartOf="@+id/button_tx" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:id="@+id/button_tx"
+            android:layout_above="@+id/checkBox_comm"
+            android:layout_alignRight="@+id/checkBox_disconnect"
+            android:layout_alignEnd="@+id/checkBox_disconnect" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="断开"
+            android:id="@+id/button_disconnect"
+            android:layout_above="@+id/checkBox_disconnect"
+            android:layout_toRightOf="@+id/checkBox_disconnect"
+            android:layout_toEndOf="@+id/checkBox_disconnect" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描"
+            android:id="@+id/checkBox_scan"
+            android:layout_below="@+id/button_scan"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接"
+            android:id="@+id/checkBox_connect"
+            android:layout_below="@+id/button_scan"
+            android:layout_toRightOf="@+id/textView_status"
+            android:layout_toEndOf="@+id/textView_status"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通信"
+            android:id="@+id/checkBox_comm"
+            android:layout_below="@+id/button_connect"
+            android:layout_toRightOf="@+id/checkBox_connect"
+            android:layout_toEndOf="@+id/checkBox_connect"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="断开"
+            android:id="@+id/checkBox_disconnect"
+            android:checked="false"
+            android:layout_alignTop="@+id/checkBox_comm"
+            android:layout_toRightOf="@+id/checkBox_comm"
+            android:layout_toEndOf="@+id/checkBox_comm" />
+    </LinearLayout>
+</LinearLayout>
