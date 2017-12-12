@@ -27,7 +27,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/edit_status"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:singleLine="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -53,8 +54,7 @@
             android:id="@+id/button_scan"
             android:layout_below="@+id/textView_status"
             android:layout_toLeftOf="@+id/button_connect"
-            android:layout_toStartOf="@+id/button_connect" />
-
+            android:layout_toStartOf="@+id/button_connect"
             android:onClick="scan" />
 
         <Button
@@ -133,4 +133,39 @@
             android:layout_toRightOf="@+id/checkBox_comm"
             android:layout_toEndOf="@+id/checkBox_comm" />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备:"
+            android:id="@+id/textView"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_bt_name"
+            android:text="MH_TEST"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.74"
+            android:singleLine="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:spinnerMode="dialog"
+            android:layout_weight="1"
+            android:prompt="@string/spin_title" />
+
+            <!--android:entries="@array/bt_name_array"-->
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -3,4 +3,12 @@
     <string name="edit_status">未连接</string>
     <string name="button_send">发送</string>
     <string name="title_activity_display_message">My Message</string>
+    <string-array name="bt_name_array">
+        <item>MH_TEST</item>
+        <item>MH_ranzhao</item>
+        <item>None</item>
+        <item>None</item>
+    </string-array>
+    <string name="spin_title">选择设备</string>
+
 </resources>
