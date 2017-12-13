@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     //真正的字符串数据将保存在这个list中
     private List<String> device_list;
     private ArrayAdapter spin_adapter;
+    private com.example.android.BluetoothChat.BluetoothChatService mChatService = null;
 
     private static final String[] device_default =
             {
