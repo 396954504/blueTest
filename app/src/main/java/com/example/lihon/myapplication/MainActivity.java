@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     //真正的字符串数据将保存在这个list中
     private List<String> device_list;
     private ArrayAdapter spin_adapter;
-    private com.example.android.BluetoothChat.BluetoothChatService mChatService = null;
+    //private com.example.android.BluetoothChat.BluetoothChatService mChatService = null;
 
     private static final String[] device_default =
             {
@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         if (D)
             Log.w(TAG, "+++ onCreate +++");
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (D)
+            Log.w(TAG, "getDefaultAdapter ok");
         if (mBluetoothAdapter == null) {
             Toast.makeText(mContext, "No Bluetooth!", Toast.LENGTH_LONG).show();
             finish();
@@ -64,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
             Intent enabler = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enabler, REQUEST_ENABLE);
         }
+        if (D)
+            Log.w(TAG, "before get name");
         //获取本机蓝牙名称
         String name = mBluetoothAdapter.getName();
         //获取本机蓝牙地址
